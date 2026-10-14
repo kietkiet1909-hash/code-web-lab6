@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xúc xắc may mắn</title>
+</head>
+<body>
+    <h1>Xúc xắc may mắn</h1>
+    <button onclick="rollDice()">Lắc xúc xắc</button>
+    <p id="result"></p>
+    <script>
+        function rollDice(){
+            let dice1 = Math.floor(Math.random() * 6) + 1;
+            let dice2 = Math.floor(Math.random() * 6) + 1;
+            document.getElementById("result").innerHTML = "Kết quả: " + dice1 + " và " + dice2;
+        }
+    </script>
+</body>
+</html>

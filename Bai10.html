@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính đơn giản </title>
+</head>
+<body>
+    <h1>Máy tính đơn giản</h1>
+    <input type="number" id="num1" placeholder="Nhập số thứ nhất">
+    <input type="number" id="num2" placeholder="Nhập số thứ hai">
+    <select id="operation">
+        <option value="add">Cộng</option>
+        <option value="subtract">Trừ</option>
+        <option value="multiply">Nhân</option>
+        <option value="divide">Chia</option>
+    </select>
+    <button onclick="calculate()">Tính toán</button>
+    <p id="result"></p>
+    <script>
+        function calculate(){
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let operation = document.getElementById("operation").value;
+            let result;
+            switch(operation){
+                case "add":
+                    result = num1 + num2;
+                    break;
+                case "subtract":
+                    result = num1 - num2;
+                    break;
+                case "multiply":
+                    result = num1 * num2;
+                    break;
+                case "divide":
+                    if(num2 !== 0){
+                        result = num1 / num2;
+                    }else{
+                        result = "Không thể chia cho 0";
+                    }
+                    break;
+                default:
+                    result = "Phép toán không hợp lệ";
+            }
+            document.getElementById("result").innerHTML = "Kết quả: " + result;
+        }
+    </script>
+</body>
+</html>

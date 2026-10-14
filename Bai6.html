@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò chơi  oẵn tù tì </title>
+</head>
+<body>
+    <h1>Trò chơi oẵn tù tì </h1>
+    <label for="">Chọn: </label>
+    <select id="userChoice">
+        <option value="rock">Oẳn</option>
+        <option value="paper">Tù</option>
+        <option value="scissors">Tì</option>
+    </select>
+    <button onclick="playGame()">Chơi</button>
+    <p id="result"></p>
+    <script>
+        function playGame(){
+            let userChoice = document.getElementById("userChoice").value;
+            let choices = ["rock", "paper", "scissors"];
+            let computerChoice = choices[Math.floor(Math.random() * 3)];
+            let result = "";
+            if(userChoice === computerChoice){
+                result = "Hòa! Cả hai đều chọn: " + userChoice;
+            }else if(
+                (userChoice === "rock" && computerChoice === "scissors") ||
+                (userChoice === "paper" && computerChoice === "rock") ||
+                (userChoice === "scissors" && computerChoice === "paper")
+            ){
+                result = "Bạn thắng! Bạn chọn: " + userChoice + ", Máy chọn: " + computerChoice;
+            }else{
+                result = "Bạn thua! Bạn chọn: " + userChoice + ", Máy chọn: " + computerChoice;
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

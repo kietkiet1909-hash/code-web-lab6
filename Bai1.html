@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số chẵn </title>
+</head>
+<body>
+   <h1>Kiểm tra số chẵn -số lẻ </h1>
+   <input type="number" id="number" placeholder="Nhập số cần kiểm tra">
+   <button onclick="checkEvenOdd()">Kiểm tra</button>
+   <p id="result"></p>
+   <script>
+        function checkEvenOdd(){
+            let number = document.getElementById("number").value;
+            if(number % 2 === 0){
+                document.getElementById("result").innerHTML = number + " là số chẵn";
+            }else{
+                document.getElementById("result").innerHTML = number + " là số lẻ";
+            }
+        }
+    </script>
+</body>
+</html>

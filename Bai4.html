@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính tình yêu</title>
+</head>
+<body>
+    <h1>Máy tính tình yêu ❤️</h1>
+    <label for="">Nhập tên bạn : </label>
+    <input type="text" id="name1" >
+    <label for="">Nhập tên người ấy : </label>
+    <input type="text" id="name2" >
+    <button onclick="calculateLove()">Tính toán</button>
+    <p id="result"></p>
+    <script>
+        function calculateLove(){
+            let name1 = document.getElementById("name1").value;
+            let name2 = document.getElementById("name2").value;
+            let lovePercent = Math.floor(Math.random() * 100) + 1;
+            if(lovePercent>50){
+                document.getElementById("result").innerHTML = name1 + " ❤️ " + name2 + " " + lovePercent + "% Chúc mừng! Hai bạn rất hợp nhau!"; 
+            }
+            else{
+                document.getElementById("result").innerHTML = name1 + " ❤️ " + name2 + " " + lovePercent + "% Chia tay sớm bớt đau khổ!"; 
+            } 
+        }
+    </script>
+</body>
+</html>

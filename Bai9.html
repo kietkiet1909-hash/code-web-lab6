@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quay thưởng may mắn </title>
+</head>
+<body>
+    <h1>Quay thưởng may mắn</h1>
+    <button onclick="quayThuong()">Quay thưởng</button>
+    <p id="result"></p>
+    <script>
+        function quayThuong(){
+            let randomNumber = Math.floor(Math.random() * 100) + 1;
+            document.getElementById("result").innerHTML = "Số may mắn của bạn là: " + randomNumber;
+        }
+    </script>
+</body>
+</html>

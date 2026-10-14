@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Xem bói tình yêu </h2>
+    <label for="">Nhập tên bạn: </label>
+    <input type="text" id="tenban" >
+    <br>
+    <label for="">Nhập tên người ấy: </label>
+    <input type="text" id="tennguoiay" >
+    <br>
+    <button onclick="tinhyeu()">Xem kết quả</button>
+    <h3 id="result"></h3>
+    <script >
+        function tinhyeu(){
+            let yourName = document.getElementById("tenban").value;
+            let yourLove = document.getElementById("tennguoiay").value;
+            let lovePercent = Math.floor(Math.random() * 100) + 1;
+            if(lovePercent>50){
+                document.getElementById("result").innerHTML = yourName + " ❤️ " + yourLove + " " + lovePercent + "% chức mừng .Hai bạn rất hợp nhau!"; 
+            }
+            else{
+                document.getElementById("result").innerHTML = yourName + " ❤️ " + yourLove + " " + lovePercent + "% Chia tay sớm bớt đau khổ!"; 
+            } 
+        }
+    </script>
+</body>
+</html>
