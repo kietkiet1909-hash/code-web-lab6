@@ -1,0 +1,106 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile cá nhân</title>
+    <style>
+        /* Nền trang */
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        /* Khối card */
+        .card {
+            width: 350px;
+            margin: 50px auto;
+            padding: 30px;
+            border: 2px solid #333;
+            border-radius: 15px;
+            background-color: white;
+            text-align: center;
+        }
+        /* Avatar */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #3498db;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        /* Tên */
+        .name {
+            font-size: 30px;
+            margin: 10px 0;
+            color: #222;
+        }
+        /* Nghề nghiệp */
+        .job {
+            font-size: 18px;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        /* Giới thiệu */
+        .intro {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        /* Danh sách kỹ năng */
+        .skills {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .skills li {
+            display: inline-block;
+            background-color: #e8f4fc;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin: 5px;
+            color: #2574a9;
+        }
+        /* Nút liên hệ */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        /* Hiệu ứng hover */
+        .btn:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- Ảnh đại diện -->
+        <img class="avatar" src="avatar.jpg" alt="Ảnh đại diện">
+        <!-- Tên -->
+        <h1 class="name">Lâm Tuấn Kiệt</h1>
+        <!-- Nghề nghiệp -->
+        <h2 class="job">Sinh viên Công nghệ thông tin</h2>
+        <!-- Giới thiệu -->
+        <p class="intro">
+            Tôi là một sinh viên yêu thích công nghệ và lập trình.
+            Tôi đang học tập và phát triển kỹ năng để trở thành một lập trình viên chuyên nghiệp.
+        </p>
+        <!-- Danh sách kỹ năng -->
+        <ul class="skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Bơi lội</li>
+        </ul>
+        <!-- Nút liên hệ -->
+        <a href="#" class="btn">Liên hệ</a>
+    </div>
+</body>
+</html>
