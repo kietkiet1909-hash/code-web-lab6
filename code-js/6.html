@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập 6 - calculateAverage</title>
+  </head>
+  <body>
+    <script>
+      function print(value) {
+        document.body.innerHTML += value + "<br>";
+      }
+
+      function calculateAverage(arr) {
+        if (arr.length === 0) {
+          return 0;
+        }
+
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+        return sum / arr.length;
+      }
+      print(calculateAverage([10, 20, 30, 40, 50]));
+    </script>
+  </body>
+</html>
+

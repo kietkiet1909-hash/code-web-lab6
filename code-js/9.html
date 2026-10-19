@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập 9 - alternateSum</title>
+  </head>
+  <body>
+    <script>
+      function print(value) { document.body.insertAdjacentHTML("beforeend", "<p>" + value + "</p>"); }
+
+      function alternateSum(arr) {
+        let sum = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+          if (i % 2 === 0) {
+            sum += arr[i];
+          } else {
+            sum -= arr[i];
+          }
+        }
+
+        return sum;
+      }
+
+      print(alternateSum([10, 5, 6, 3])); // 8
+      print(alternateSum([1, 2, 3, 4, 5])); // 3
+    </script>
+  </body>
+</html>
+

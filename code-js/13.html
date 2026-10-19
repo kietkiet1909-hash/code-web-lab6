@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập 13 - calculateGrade</title>
+  </head>
+  <body>
+    <script>
+      function print(value) { document.body.insertAdjacentHTML("beforeend", "<p>" + value + "</p>"); }
+
+      function calculateGrade(scores) {
+        if (scores.length === 0) {
+          return "F";
+        }
+
+        let sum = 0;
+
+        for (let i = 0; i < scores.length; i++) {
+          sum += scores[i];
+        }
+
+        const average = sum / scores.length;
+
+        if (average >= 90) {
+          return "A";
+        } else if (average >= 80) {
+          return "B";
+        } else if (average >= 70) {
+          return "C";
+        } else if (average >= 60) {
+          return "D";
+        } else {
+          return "F";
+        }
+      }
+
+      print(calculateGrade([90, 85, 95])); // A
+      print(calculateGrade([75, 80, 85])); // B
+      print(calculateGrade([55, 60, 65])); // D
+    </script>
+  </body>
+</html>
+

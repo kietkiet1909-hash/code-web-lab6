@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập 12 - findLongestWord</title>
+  </head>
+  <body>
+    <script>
+      function print(value) { document.body.insertAdjacentHTML("beforeend", "<p>" + value + "</p>"); }
+
+      function findLongestWord(arr) {
+        if (arr.length === 0) {
+          return "";
+        }
+
+        let longest = arr[0];
+
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i].length > longest.length) {
+            longest = arr[i];
+          }
+        }
+
+        return longest;
+      }
+
+      print(findLongestWord(["apple", "banana", "cherry", "date"])); // banana
+      print(findLongestWord(["hello", "world", "this", "is", "great"])); // hello
+    </script>
+  </body>
+</html>
+
